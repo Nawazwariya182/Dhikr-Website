@@ -22,10 +22,12 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const downloadLink = process.env.NEXT_PUBLIC_DOWNLOAD_LINK || "/downloads/dhikr-app.apk";
-  const appVersion = process.env.NEXT_PUBLIC_APP_VERSION || "v3.0.0";
+  const appVersion = process.env.NEXT_PUBLIC_APP_VERSION || "v2.0.0";
+  const defaultDownloadLink = `https://github.com/Nawazwariya182/Dhikr/releases/download/${appVersion}/dhikr.apk`;
+  const downloadLink = process.env.NEXT_PUBLIC_DOWNLOAD_LINK || defaultDownloadLink;
   const autoDownload = process.env.NEXT_PUBLIC_AUTO_DOWNLOAD === "true";
   const fileSize = process.env.NEXT_PUBLIC_APK_FILE_SIZE || "~28 MB";
+  const mockuplink = process.env.NEXT_PUBLIC_MOCKUP || "/mockup.png";
   const featuresRaw = process.env.NEXT_PUBLIC_APP_FEATURES || "";
   const featuresList = featuresRaw 
     ? featuresRaw.split(";") 
@@ -148,13 +150,11 @@ export default function Home() {
               {/* Soft decorative glow behind mockup */}
               <div className="absolute inset-0 bg-primary-app/10 blur-[60px] rounded-full scale-75 animate-pulse" />
               <div className="relative w-full max-w-[310px] aspect-[9/18.5] rounded-[28px] overflow-hidden drop-shadow-[0_35px_60px_rgba(0,0,0,0.8)] border border-white/5 transition-transform duration-700 hover:rotate-1 animate-float">
-                <Image 
-                  src="/mockup.png" 
-                  alt="Dhikr App UI Mockup" 
-                  fill 
-                  style={{ objectFit: "cover" }}
+                <img
+                  src={mockuplink}
+                  alt="Dhikr App UI Mockup"
+                  style={{ objectFit: "cover", width: '100%', height: '100%' }}
                   className="opacity-95"
-                  priority
                 />
               </div>
             </div>
