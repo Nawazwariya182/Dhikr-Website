@@ -1,0 +1,4 @@
+Place your compiled 'dhikr-app.apk' file inside this directory:
+c:\Users\wariy\Downloads\CODING\Projects\Dikhr\dikhr-website\public\downloads\dhikr-app.apk
+
+Once the file is placed here, clicking the "Download Latest APK" button on the landing page will trigger a direct download of your app!
