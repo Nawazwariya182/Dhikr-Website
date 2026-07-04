@@ -27,7 +27,7 @@ export default function Home() {
   const downloadLink = process.env.NEXT_PUBLIC_DOWNLOAD_LINK || defaultDownloadLink;
   const autoDownload = process.env.NEXT_PUBLIC_AUTO_DOWNLOAD === "true";
   const fileSize = process.env.NEXT_PUBLIC_APK_FILE_SIZE || "~28 MB";
-  const mockuplink = process.env.NEXT_PUBLIC_MOCKUP || "/mockup.png";
+  const mockuplink = process.env.NEXT_PUBLIC_MOCKUP || "";
   const featuresRaw = process.env.NEXT_PUBLIC_APP_FEATURES || "";
   const featuresList = featuresRaw 
     ? featuresRaw.split(";") 
