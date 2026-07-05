@@ -96,7 +96,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex-1 relative min-h-screen grid-mesh" id="home-main">
+    <main className="flex-1 relative min-h-screen grid-mesh overflow-x-hidden" id="home-main">
       {/* Background Ambient Lights */}
       <div className="absolute top-20 left-1/4 w-[400px] h-[400px] rounded-full radial-glow-1 pointer-events-none z-0" />
       <div className="absolute top-[800px] right-1/4 w-[500px] h-[500px] rounded-full radial-glow-2 pointer-events-none z-0" />
