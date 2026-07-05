@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
+import { Github } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -48,6 +49,17 @@ export default function RootLayout({
                 <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
                   <li><a href="/#features" className="text-slate-400 text-sm hover:text-primary-app transition" id="footer-features-link">Features</a></li>
                   <li><a href="/#download" className="text-slate-400 text-sm hover:text-primary-app transition" id="footer-download-link">Download APK</a></li>
+                  <li>
+                    <a 
+                      href="https://github.com/Nawazwariya182/Dhikr" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-slate-400 text-sm hover:text-primary-app transition inline-flex items-center gap-1.5" 
+                      id="footer-github-link"
+                    >
+                      <Github className="w-4 h-4" /> GitHub
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

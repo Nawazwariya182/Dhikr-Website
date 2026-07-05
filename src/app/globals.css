@@ -35,6 +35,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background-color: #070b13;
   color: #cbd5e1;

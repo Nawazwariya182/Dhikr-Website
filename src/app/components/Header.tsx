@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +29,18 @@ export default function Header() {
             <li><a href="/#features" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-features">Features</a></li>
             <li><a href="/privacy" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-privacy">Privacy Policy</a></li>
             <li><a href="/terms" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-terms">Terms of Service</a></li>
+            <li>
+              <a 
+                href="https://github.com/Nawazwariya182/Dhikr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center text-slate-300 hover:text-white transition p-1"
+                id="nav-github"
+                title="GitHub Repository"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </li>
             <li><a href="/#download" className="inline-flex items-center justify-center bg-primary-app hover:bg-primary-dark text-white font-bold px-4 py-2 rounded-xl transition text-sm" id="nav-download">Download APK</a></li>
           </ul>
         </nav>
@@ -76,6 +88,18 @@ export default function Header() {
                 id="nav-mobile-terms"
               >
                 Terms of Service
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://github.com/Nawazwariya182/Dhikr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-2 py-2 text-base font-semibold text-slate-300 hover:text-primary-app transition"
+                id="nav-mobile-github"
+              >
+                <Github className="w-5 h-5" /> GitHub Repository
               </a>
             </li>
             <li className="pt-3 border-t border-surface-light">
