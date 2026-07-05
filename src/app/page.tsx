@@ -190,7 +190,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-stretch" id="preview-container">
             
             {/* Widget 1: Interactive Tasbih Widget */}
-            <div className="md:col-span-5 flex flex-col justify-between p-8 rounded-3xl border border-white/5 bg-slate-950/50 backdrop-blur-md relative overflow-hidden group shadow-lg shadow-black/40">
+            <div className="md:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-white/5 bg-slate-950/50 backdrop-blur-md relative overflow-hidden group shadow-lg shadow-black/40">
               <div className="absolute top-0 right-0 w-24 h-24 bg-accent-app/5 blur-2xl rounded-full" />
               <div>
                 <div className="flex justify-between items-center mb-6">
@@ -234,14 +234,14 @@ export default function Home() {
             </div>
 
             {/* Widget 2: Quran Reader Mockup Card */}
-            <div className="md:col-span-7 flex flex-col justify-between p-8 rounded-3xl border border-white/5 bg-slate-950/50 backdrop-blur-md relative overflow-hidden group shadow-lg shadow-black/40">
+            <div className="md:col-span-7 flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-white/5 bg-slate-950/50 backdrop-blur-md relative overflow-hidden group shadow-lg shadow-black/40">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-app/5 blur-3xl rounded-full" />
               <div>
-                <div className="flex justify-between items-center mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                   <span className="text-xs font-bold uppercase tracking-wider text-primary-app flex items-center gap-1.5">
                     <BookOpen className="w-4 h-4" /> Quran Interface Preview
                   </span>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-primary-app/10 text-primary-app border border-primary-app/20">Ahmed Raza Khan</span>
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-900 text-slate-400">Uthmani Hafs</span>
                   </div>
@@ -291,7 +291,7 @@ export default function Home() {
               
               return (
                 <div 
-                  className={`${colSpan} flex flex-col justify-between p-8 rounded-3xl border border-white/5 bg-slate-950/30 hover:border-primary-app/20 transition-all duration-300 hover:shadow-2xl`} 
+                  className={`${colSpan} flex flex-col justify-between p-6 sm:p-8 rounded-3xl border border-white/5 bg-slate-950/30 hover:border-primary-app/20 transition-all duration-300 hover:shadow-2xl`} 
                   key={idx}
                   id={`feat-custom-${idx}`}
                 >
@@ -323,8 +323,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="overflow-hidden border border-white/5 rounded-2xl bg-slate-950/50" id="compare-table-wrapper">
-            <table className="w-full text-left border-collapse" id="compare-table">
+          <div className="overflow-x-auto border border-white/5 rounded-2xl bg-slate-950/50" id="compare-table-wrapper">
+            <table className="w-full min-w-[550px] text-left border-collapse" id="compare-table">
               <thead>
                 <tr className="border-b border-white/5 bg-slate-900/60">
                   <th className="p-5 text-sm font-bold text-white">App Features</th>
@@ -362,7 +362,7 @@ export default function Home() {
       {/* Download Section */}
       <section className="py-24 relative z-10" id="download">
         <div className="container mx-auto px-4 max-w-3xl">
-          <div className="relative bg-gradient-to-b from-slate-900 to-slate-950 border border-white/5 rounded-3xl p-10 md:p-16 text-center overflow-hidden shadow-2xl" id="download-box">
+          <div className="relative bg-gradient-to-b from-slate-900 to-slate-950 border border-white/5 rounded-3xl p-6 sm:p-10 md:p-16 text-center overflow-hidden shadow-2xl" id="download-box">
             {/* Ambient gold glow */}
             <div className="absolute inset-0 bg-accent-app/5 blur-3xl pointer-events-none" />
             
@@ -377,10 +377,10 @@ export default function Home() {
               <a 
                 href={downloadLink} 
                 download 
-                className="glow-btn inline-flex items-center justify-center gap-2.5 bg-primary-app hover:bg-primary-dark text-white font-bold px-10 py-4.5 rounded-2xl shadow-xl shadow-primary-app/20 transition-all text-base cursor-pointer"
+                className="glow-btn inline-flex items-center justify-center gap-2.5 bg-primary-app hover:bg-primary-dark text-white font-bold w-full sm:w-auto px-8 py-4 rounded-2xl shadow-xl shadow-primary-app/20 transition-all text-base cursor-pointer"
                 id="download-apk-button"
               >
-                <Download className="w-5.5 h-5.5" /> Download App APK ({appVersion})
+                <Download className="w-5 h-5" /> Download App APK ({appVersion})
               </a>
               
               <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold" id="download-meta">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from "next/image";
+import Header from "./components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,29 +22,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col bg-bg-app text-slate-300">
         {/* Header */}
-        <header className="sticky top-0 z-50 border-b border-surface-light bg-bg-app/85 backdrop-blur-md" id="nav-header">
-          <div className="container mx-auto px-4 max-w-5xl h-20 flex justify-between items-center">
-            <a href="/" className="flex items-center gap-1 text-2xl font-black text-primary-app tracking-wide animate-fadeIn" id="logo-anchor">
-              <Image 
-                src="/logo.png" 
-                alt="Dhikr App Logo" 
-                width={36} 
-                height={36} 
-                className="rounded-lg object-contain"
-                priority
-              />
-              Dhikr<span className="text-accent-app">.</span>
-            </a>
-            <nav>
-              <ul className="flex items-center gap-6 list-none p-0 m-0">
-                <li><a href="/#features" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-features">Features</a></li>
-                <li><a href="/privacy" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-privacy">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-sm font-semibold text-slate-300 hover:text-primary-app transition" id="nav-terms">Terms of Service</a></li>
-                <li><a href="/#download" className="inline-flex items-center justify-center bg-primary-app hover:bg-primary-dark text-white font-bold px-4 py-2 rounded-xl transition text-sm" id="nav-download">Download APK</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         {children}
 
